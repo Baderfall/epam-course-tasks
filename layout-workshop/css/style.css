@@ -411,7 +411,7 @@ ul.news-block-list {
 
 .bottom-block li {
     padding-top: 27px;
-    padding-bottom: 27px;
+    padding-bottom: 26px;
     list-style: none;
     border-top: 1px solid #e7e7e7;
 }
@@ -432,10 +432,13 @@ ul.news-block-list {
     border-radius: 50%;
 }
 
+.news-column .text {
+    margin-left: 100px;
+}
+
 .news-column li p {
     margin-top: 4px;
     margin-bottom: 0;
-    margin-left: 100px;
 }
 
 .news-column li a {
