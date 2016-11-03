@@ -1,0 +1,268 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>forms_and_widgets</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="widget-block">
+            <div class="calendar-widget">
+                <header>
+                    <a class="arrow-left sprite" href="#"></a>
+                    <a class="arrow-right sprite" href="#"></a>
+                    <h3>2012</h3>
+                    <h4>July</h4>
+                </header>
+                <table>
+                    <tr>
+                        <th>S</th>
+                        <th>M</th>
+                        <th>T</th>
+                        <th>W</th>
+                        <th>T</th>
+                        <th>F</th>
+                        <th>S</th>
+                    </tr>
+                    <tr>
+                        <td><span>1</span></td>
+                        <td><span>2</span></td>
+                        <td><span>3</span></td>
+                        <td><span>4</span></td>
+                        <td><span>5</span></td>
+                        <td class="active"><span>6</span></td>
+                        <td><span>7</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>8</span></td>
+                        <td><span>9</span></td>
+                        <td><span>10</span></td>
+                        <td><span>11</span></td>
+                        <td><span>12</span></td>
+                        <td><span>13</span></td>
+                        <td><span>14</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>15</span></td>
+                        <td><span>16</span></td>
+                        <td><span>17</span></td>
+                        <td><span>18</span></td>
+                        <td><span>19</span></td>
+                        <td><span>20</span></td>
+                        <td><span>21</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>22</span></td>
+                        <td><span>23</span></td>
+                        <td><span>24</span></td>
+                        <td><span>25</span></td>
+                        <td><span>26</span></td>
+                        <td><span>27</span></td>
+                        <td><span>28</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>29</span></td>
+                        <td><span>30</span></td>
+                        <td><span>31</span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="widget-block">
+            <div class="music-widget">
+                <div class="logo-block">
+                    <img src="img/band-logo.jpg" alt="band-logo">
+                    <a href="#"><div class="symbol sprite"></div>follow</a>
+                </div>
+                <div class="info-block">
+                    <h3>Faded Paper Figures</h3>
+                    <h4>Invent it all again</h4>
+                    <div class="player">
+                        <div class="timeline">
+                            <div class="loaded" style="width: 80%"></div>
+                            <div class="played" style="width: 60%"></div>
+                        </div>
+                        <div class="time">-1:57</div>
+                        <ul>
+                            <li class="player-play sprite sprite"><a href="#"></a></li>
+                            <li class="player-previous sprite"><a href="#"></a></li>
+                            <li class="player-next sprite"><a href="#"></a></li>
+                            <li class="player-shuffle sprite"><a href="#"></a></li>
+                            <li class="player-repeat sprite"><a href="#"></a></li>
+                            <li class="player-like sprite"><a href="#"></a></li>
+                            <li class="player-add sprite"><a href="#"></a></li>
+                            <li class="player-share sprite"><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget-block">
+            <div class="login-widget">
+                <form action="">
+                    <label class="sprite email" for="login-email"></label>
+                    <input class="field" id="login-email" type="email" placeholder="Email address...">
+                    <label class="sprite password" for="login-password"></label>
+                    <input class="field" id="login-password" type="password" placeholder="Password...">
+                    <input class="sign-up" type="submit" value="Sign up">
+                    <input class="sign-in" type="submit" value="Sign in">
+                </form>
+            </div>
+        </div>
+        <div class="widget-block">
+            <div class="form-parts clearfix">
+                <input type="text" value="Valid input">
+                <input id="checkbox1" type="checkbox">
+                <label class="sprite" for="checkbox1"></label>
+                <input type="range">
+                <input id="example-2" type="radio" name="example">
+                <label class="sprite" for="example-2"></label>
+                <input type="email" value="Invalid input">
+                <input id="example-1" type="radio" name="example" checked>
+                <label class="sprite" for="example-1"></label>
+            </div>
+        </div>
+        <div class="widget-block">
+            <div class="converter-widget">
+                <form action="">
+                    <div class="currency-block dollar">
+                        <label for="dollar">USD</label>
+                        <input id="dollar" type="number">
+                    </div>
+                    <div class="currency-block pound">
+                        <label for="pound">GBP</label>
+                        <input id="pound" type="number">
+                    </div>
+                    <input type="submit" id="submit-form">
+                </form>
+                <div class="buttons-block">
+                    <label class="sprite" for="submit-form"></label>
+                    <a href="#" class="add-button sprite"></a>
+                    <a href="#" class="choose-button sprite"></a>
+                </div>
+            </div>
+        </div>
+        <div class="widget-block">
+            <div class="weather-widget">
+                <div class="slider">
+                    <ul class="clearfix">
+                        <li class="slide">
+                            <img src="img/slider-image-1.jpg" alt="sea">
+                            <div class="slide-text">
+                                <h2>73<sup>&#176;</sup></h2>
+                                <h3>Zagora, Greece</h3>
+                                <h3>8:34 am</h3>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <img src="img/slider-image-2.jpg" alt="apples">
+                            <div class="slide-text">
+                                <h2>73<sup>&#176;</sup></h2>
+                                <h3>Zagora, Greece</h3>
+                                <h3>8:34 am</h3>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <img src="img/slider-image-3.jpg" alt="night">
+                            <div class="slide-text">
+                                <h2>73<sup>&#176;</sup></h2>
+                                <h3>Zagora, Greece</h3>
+                                <h3>8:34 am</h3>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="slider-control">
+                        <a class="active" href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="buttons clearfix">
+                    <a class="f-button sprite" href="#"></a>
+                    <a class="c-button sprite" href="#"></a>
+                    <a class="add-button sprite" href="#"></a>
+                    <a class="settings-button sprite" href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div class="widget-block">
+            <div class="message-widget">
+                <header class="clearfix">
+                    <a class="settings-button sprite" href="#"></a>
+                    <a class="add-button sprite" href="#"></a>
+                </header>
+                <ul>
+                    <li class="message">
+                        <a href="#">
+                            <div class="message-content">
+                                <img src="img/message-avatar-1.jpg" alt="">
+                                <div class="message-text online">
+                                    <h2>Yaroslav Lozhkin</h2>
+                                    <p>Alright got it!</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="message">
+                        <a href="#">
+                            <div class="message-content">
+                                <img src="img/message-avatar-2.jpg" alt="">
+                                <div class="message-text sent offline">
+                                    <h2>Michael Zenaty</h2>
+                                    <p>Sent</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="message">
+                        <a href="#">
+                            <div class="message-content">
+                                <img src="img/message-avatar-3.jpg" alt="">
+                                <div class="message-text typing">
+                                    <h2>Wells Riley</h2>
+                                    <p>Typing...</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="message">
+                        <a href="#">
+                            <div class="message-content">
+                                <img src="img/message-avatar-4.jpg" alt="">
+                                <div class="message-text failed">
+                                    <h2>Matt Vickers</h2>
+                                    <p>Not delivered</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="message">
+                        <a href="#">
+                            <div class="message-content">
+                                <img src="img/message-avatar-5.jpg" alt="">
+                                <div class="message-text online">
+                                    <h2>Divya Manian</h2>
+                                    <p>You can download it on github easily</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="message">
+                        <a href="#">
+                            <div class="message-content">
+                                <img src="img/message-avatar-6.jpg" alt="">
+                                <div class="message-text">
+                                    <h2>Vin Thomas</h2>
+                                    <p>Thank you!</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
