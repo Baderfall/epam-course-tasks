@@ -2,81 +2,85 @@
     <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>forms_and_widgets</title>
+        <title>accessibility</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div class="widget-block">
-            <div class="calendar-widget">
+            <div class="calendar-widget" aria-lebelledby="calendar-widget" tabindex="0">
+                <h2 id="calendar-widget" class="wcag-hidden">Calendar widget, Current date: 6 July 2012 Friday</h2>
                 <header>
-                    <a class="arrow-left sprite" href="#"></a>
-                    <a class="arrow-right sprite" href="#"></a>
-                    <h3>2012</h3>
-                    <h4>July</h4>
+                    <a class="arrow-left sprite" href="#" role="button" aria-label="Show previous month"></a>
+                    <div class="date" tabindex="0">
+                        <h3>2012</h3>
+                        <h4>July</h4>
+                    </div>
+                    <a class="arrow-right sprite" href="#" role="button" aria-label="Show next month"></a>
                 </header>
-                <table>
+                <table role="presentation">
                     <tr>
-                        <th>S</th>
-                        <th>M</th>
-                        <th>T</th>
-                        <th>W</th>
-                        <th>T</th>
-                        <th>F</th>
-                        <th>S</th>
+                        <th aria-label="Sunday">S</th>
+                        <th aria-label="Monday">M</th>
+                        <th aria-label="Tuesday">T</th>
+                        <th aria-label="Wednesday">W</th>
+                        <th aria-label="Thursday">T</th>
+                        <th aria-label="Friday">F</th>
+                        <th aria-label="Saturday">S</th>
                     </tr>
                     <tr>
-                        <td><span>1</span></td>
-                        <td><span>2</span></td>
-                        <td><span>3</span></td>
-                        <td><span>4</span></td>
-                        <td><span>5</span></td>
-                        <td class="active"><span>6</span></td>
-                        <td><span>7</span></td>
+                        <td><a aria-label="1st July" href="#">1</a></td>
+                        <td><a aria-label="2nd July" href="#">2</a></td>
+                        <td><a aria-label="3rd July" href="#">3</a></td>
+                        <td><a aria-label="4th July" href="#">4</a></td>
+                        <td><a aria-label="5th July" href="#">5</a></td>
+                        <td class="active"><a href="#" aria-label="6th July, current day">6</a></td>
+                        <td><a aria-label="7th July" href="#">7</a></td>
                     </tr>
                     <tr>
-                        <td><span>8</span></td>
-                        <td><span>9</span></td>
-                        <td><span>10</span></td>
-                        <td><span>11</span></td>
-                        <td><span>12</span></td>
-                        <td><span>13</span></td>
-                        <td><span>14</span></td>
+                        <td><a aria-label="8th July" href="#">8</a></td>
+                        <td><a aria-label="9th July" href="#">9</a></td>
+                        <td><a aria-label="10th July" href="#">10</a></td>
+                        <td><a aria-label="11th July" href="#">11</a></td>
+                        <td><a aria-label="12th July" href="#">12</a></td>
+                        <td><a aria-label="13th July" href="#">13</a></td>
+                        <td><a aria-label="14th July" href="#">14</a></td>
                     </tr>
                     <tr>
-                        <td><span>15</span></td>
-                        <td><span>16</span></td>
-                        <td><span>17</span></td>
-                        <td><span>18</span></td>
-                        <td><span>19</span></td>
-                        <td><span>20</span></td>
-                        <td><span>21</span></td>
+                        <td><a aria-label="15th July" href="#">15</a></td>
+                        <td><a aria-label="16th July" href="#">16</a></td>
+                        <td><a aria-label="17th July" href="#">17</a></td>
+                        <td><a aria-label="18th July" href="#">18</a></td>
+                        <td><a aria-label="19th July" href="#">19</a></td>
+                        <td><a aria-label="20th July" href="#">20</a></td>
+                        <td><a aria-label="21st July" href="#">21</a></td>
                     </tr>
                     <tr>
-                        <td><span>22</span></td>
-                        <td><span>23</span></td>
-                        <td><span>24</span></td>
-                        <td><span>25</span></td>
-                        <td><span>26</span></td>
-                        <td><span>27</span></td>
-                        <td><span>28</span></td>
+                        <td><a aria-label="22nd July" href="#">22</a></td>
+                        <td><a aria-label="23rd July" href="#">23</a></td>
+                        <td><a aria-label="24th July" href="#">24</a></td>
+                        <td><a aria-label="25th July" href="#">25</a></td>
+                        <td><a aria-label="26th July" href="#">26</a></td>
+                        <td><a aria-label="27th July" href="#">27</a></td>
+                        <td><a aria-label="28th July" href="#">28</a></td>
                     </tr>
                     <tr>
-                        <td><span>29</span></td>
-                        <td><span>30</span></td>
-                        <td><span>31</span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
+                        <td><a aria-label="29th July" href="#">29</a></td>
+                        <td><a aria-label="30th July" href="#">30</a></td>
+                        <td><a aria-label="31st July" href="#">31</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 </table>
             </div>
         </div>
         <div class="widget-block">
-            <div class="music-widget">
+            <div class="music-widget" aria-lebelledby="music-widget" tabindex="0">
+                <h2 id="music-widget" class="wcag-hidden">Music widget</h2>
                 <div class="logo-block">
-                    <img src="img/band-logo.jpg" alt="band-logo">
-                    <a href="#"><div class="symbol sprite"></div>follow</a>
+                    <img src="img/band-logo.jpg" alt="faded paper logo">
+                    <a href="#" role="button" aria-label="Follow band"><div class="symbol sprite"></div>follow</a>
                 </div>
                 <div class="info-block">
                     <h3>Faded Paper Figures</h3>
@@ -84,144 +88,155 @@
                     <div class="player">
                         <div class="timeline">
                             <div class="loaded" style="width: 80%"></div>
-                            <div class="played" style="width: 60%"></div>
+                            <div class="played" style="width: 60%" tabindex="0" aria-label="Timeline: press 'arrow left' to rewind, press 'arrow right' to fast forward"></div>
                         </div>
                         <div class="time">-1:57</div>
                         <ul>
-                            <li class="player-play sprite sprite"><a href="#"></a></li>
-                            <li class="player-previous sprite"><a href="#"></a></li>
-                            <li class="player-next sprite"><a href="#"></a></li>
-                            <li class="player-shuffle sprite"><a href="#"></a></li>
-                            <li class="player-repeat sprite"><a href="#"></a></li>
-                            <li class="player-like sprite"><a href="#"></a></li>
-                            <li class="player-add sprite"><a href="#"></a></li>
-                            <li class="player-share sprite"><a href="#"></a></li>
+                            <li class="player-play"><a class="sprite" href="#" role="button" aria-label="Start playing from 2:55"></a></li>
+                            <li class="player-previous"><a class="sprite" href="#" role="button" aria-label="Previous song"></a></li>
+                            <li class="player-next"><a class="sprite" href="#" role="button" aria-label="Next song"></a></li>
+                            <li class="player-shuffle"><a class="sprite" href="#" role="button" aria-label="Shuffle songs"></a></li>
+                            <li class="player-repeat"><a class="sprite" href="#" role="button" aria-label="Repeat song"></a></li>
+                            <li class="player-like"><a class="sprite" href="#" role="button" aria-label="Like song"></a></li>
+                            <li class="player-add"><a class="sprite" href="#" role="button" aria-label="Add song to library"></a></li>
+                            <li class="player-share"><a class="sprite" href="#" role="button" aria-label="Share song"></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="widget-block">
-            <div class="login-widget">
+            <div class="login-widget" aria-lebelledby="login-widget" tabindex="0">
+                <h2 id="login-widget" class="wcag-hidden">Login widget</h2>
                 <form action="">
                     <label class="sprite email" for="login-email"></label>
                     <input class="field" id="login-email" type="email" placeholder="Email address...">
+                    <label class="error-message" for="login-email"></label>
                     <label class="sprite password" for="login-password"></label>
                     <input class="field" id="login-password" type="password" placeholder="Password...">
+                    <label class="error-message" for="login-password"></label>
                     <input class="sign-up" type="submit" value="Sign up">
                     <input class="sign-in" type="submit" value="Sign in">
                 </form>
             </div>
         </div>
         <div class="widget-block">
-            <div class="form-parts clearfix">
-                <input type="text" value="Valid input">
-                <input id="checkbox1" type="checkbox">
-                <label class="sprite" for="checkbox1"></label>
-                <input type="range">
-                <input id="example-2" type="radio" name="example">
-                <label class="sprite" for="example-2"></label>
-                <input type="email" value="Invalid input">
-                <input id="example-1" type="radio" name="example" checked>
-                <label class="sprite" for="example-1"></label>
+            <div class="form-parts clearfix" aria-lebelledby="form-parts" tabindex="0">
+                <h2 id="form-parts" class="wcag-hidden">Form parts</h2>
+                <input type="text" id="input-1" aria-labelledby="input-1-label" value="Valid input">
+                <label class="wcag-hidden" for="input-1" id="input-1-label">Some text for first input</label>
+                <input id="checkbox-1" type="checkbox" aria-checked="false" tabindex="-1">
+                <label class="sprite" aria-label="Some text for checkbox" for="checkbox-1" tabindex="0"></label>
+                <input type="range" aria-label="Set X value: press 'arrow left' to decrease, press 'arrow right' to increase">
+                <input id="radio-1" type="radio" name="example" aria-checked="false" aria-labelledby="radio-1-text" tabindex="-1">
+                <label class="sprite" for="radio-1" aria-label="Some text for first radiobutton" tabindex="0"></label>
+                <input type="email" id="input-2" aria-labelledby="input-2-label" value="Invalid input">
+                <label class="wcag-hidden" for="input-2" id="input-2-label">Some text for second input</label>
+                <input id="radio-2" type="radio" name="example" aria-checked="true" tabindex="-1" checked>
+                <label class="sprite" for="radio-2" aria-label="Some text for second radiobutton" tabindex="0"></label>
             </div>
         </div>
         <div class="widget-block">
-            <div class="converter-widget">
+            <div class="converter-widget" aria-lebelledby="converter-widget" tabindex="0">
+                <h2 id="converter-widget" class="wcag-hidden">Converter widget</h2>
                 <form action="">
                     <div class="currency-block dollar">
-                        <label for="dollar">USD</label>
-                        <input id="dollar" type="number">
+                        <label for="dollar"><abbr title="United States Dollars">USD</abbr></label>
+                        <input id="dollar" type="number" aria-label="United States Dollars">
                     </div>
                     <div class="currency-block pound">
-                        <label for="pound">GBP</label>
-                        <input id="pound" type="number">
+                        <label for="pound"><abbr id="pound-label" title="Great Britain Pound">GBP</abbr></label>
+                        <input id="pound" type="number" aria-label="Great Britain Pound">
                     </div>
-                    <input type="submit" id="submit-form">
+                    <input type="submit" id="submit-form" tabindex="-1">
                 </form>
                 <div class="buttons-block">
-                    <label class="sprite" for="submit-form"></label>
-                    <a href="#" class="add-button sprite"></a>
-                    <a href="#" class="choose-button sprite"></a>
+                    <label class="sprite" for="submit-form" tabindex="0" role="button" aria-label="Convert currency"></label>
+                    <div class="more-buttons">
+                        <a href="#" class="add-button sprite" role="button" aria-label="Add currency"></a>
+                        <a href="#" class="choose-button sprite" role="button" aria-label="Choose currency"></a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="widget-block">
-            <div class="weather-widget">
-                <div class="slider">
+            <div class="weather-widget" aria-lebelledby="weather-widget" tabindex="0">
+                <h2 id="weather-widget" class="wcag-hidden">Weather widget</h2>
+                <div class="slider" tabindex="0" aria-label="Slider: press 'ctrl + arrow right' for next city, press 'ctrl + arrow left' for previous city">
                     <ul class="clearfix">
-                        <li class="slide">
-                            <img src="img/slider-image-1.jpg" alt="sea">
+                        <li class="slide" tabindex="0">
+                            <img src="img/slider-image-1.jpg" alt="Zagora seaside">
                             <div class="slide-text">
                                 <h2>73<sup>&#176;</sup></h2>
                                 <h3>Zagora, Greece</h3>
                                 <h3>8:34 am</h3>
                             </div>
                         </li>
-                        <li class="slide">
-                            <img src="img/slider-image-2.jpg" alt="apples">
+                        <li class="slide" tabindex="0">
+                            <img src="img/slider-image-2.jpg" alt="Madrid street">
                             <div class="slide-text">
-                                <h2>73<sup>&#176;</sup></h2>
-                                <h3>Zagora, Greece</h3>
+                                <h2>58<sup>&#176;</sup></h2>
+                                <h3>Madrid, Spain</h3>
                                 <h3>8:34 am</h3>
                             </div>
                         </li>
-                        <li class="slide">
-                            <img src="img/slider-image-3.jpg" alt="night">
+                        <li class="slide" tabindex="0">
+                            <img src="img/slider-image-3.jpg" alt="Tokyo night city">
                             <div class="slide-text">
-                                <h2>73<sup>&#176;</sup></h2>
-                                <h3>Zagora, Greece</h3>
+                                <h2>47<sup>&#176;</sup></h2>
+                                <h3>Tokyo, Japan</h3>
                                 <h3>8:34 am</h3>
                             </div>
                         </li>
                     </ul>
                     <div class="slider-control">
-                        <a class="active" href="#"></a>
-                        <a href="#"></a>
-                        <a href="#"></a>
+                        <a class="active" href="#" tabindex="-1"></a>
+                        <a href="#" tabindex="-1"></a>
+                        <a href="#" tabindex="-1"></a>
                     </div>
                 </div>
                 <div class="buttons clearfix">
-                    <a class="f-button sprite" href="#"></a>
-                    <a class="c-button sprite" href="#"></a>
-                    <a class="add-button sprite" href="#"></a>
-                    <a class="settings-button sprite" href="#"></a>
+                    <a class="f-button sprite" href="#" role="button" aria-label="Open full forecast"></a>
+                    <a class="c-button sprite" href="#" role="button" aria-label="Open whether clock"></a>
+                    <a class="add-button sprite" href="#" role="button" aria-label="Add another city"></a>
+                    <a class="settings-button sprite" href="#" role="button" aria-label="Open settings"></a>
                 </div>
             </div>
         </div>
         <div class="widget-block">
-            <div class="message-widget">
+            <div class="message-widget" aria-lebelledby="message-widget" tabindex="0">
+                <h2 id="message-widget" class="wcag-hidden">Message widget</h2>
                 <header class="clearfix">
-                    <a class="settings-button sprite" href="#"></a>
-                    <a class="add-button sprite" href="#"></a>
+                    <a class="settings-button sprite" href="#" role="button" aria-label="Open settings"></a>
+                    <a class="add-button sprite" href="#" role="button" aria-label="Start new dialogue"></a>
                 </header>
-                <ul>
-                    <li class="message">
+                <ul aria-live="polite"><!-- т.к. могут добавляться новые диалоги -->
+                    <li class="message" aria-live="polite">
                         <a href="#">
                             <div class="message-content">
-                                <img src="img/message-avatar-1.jpg" alt="">
+                                <img src="img/message-avatar-1.jpg" alt="Yaroslav Lozhkin avatar">
                                 <div class="message-text online">
                                     <h2>Yaroslav Lozhkin</h2>
-                                    <p>Alright got it!</p>
+                                    <p>Alright got it!<span class="wcag-hidden">online</span></p>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="message">
+                    <li class="message" aria-live="polite">
                         <a href="#">
                             <div class="message-content">
-                                <img src="img/message-avatar-2.jpg" alt="">
+                                <img src="img/message-avatar-2.jpg" alt="Michael Zenaty avatar">
                                 <div class="message-text sent offline">
                                     <h2>Michael Zenaty</h2>
-                                    <p>Sent</p>
+                                    <p>Sent<span class="wcag-hidden">do not disturb</span></p>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="message">
+                    <li class="message" aria-live="polite">
                         <a href="#">
                             <div class="message-content">
-                                <img src="img/message-avatar-3.jpg" alt="">
+                                <img src="img/message-avatar-3.jpg" alt="Wells Riley avatar">
                                 <div class="message-text typing">
                                     <h2>Wells Riley</h2>
                                     <p>Typing...</p>
@@ -229,10 +244,10 @@
                             </div>
                         </a>
                     </li>
-                    <li class="message">
+                    <li class="message" aria-live="polite">
                         <a href="#">
                             <div class="message-content">
-                                <img src="img/message-avatar-4.jpg" alt="">
+                                <img src="img/message-avatar-4.jpg" alt="Matt Vickers avatar">
                                 <div class="message-text failed">
                                     <h2>Matt Vickers</h2>
                                     <p>Not delivered</p>
@@ -240,21 +255,21 @@
                             </div>
                         </a>
                     </li>
-                    <li class="message">
+                    <li class="message" aria-live="polite">
                         <a href="#">
                             <div class="message-content">
-                                <img src="img/message-avatar-5.jpg" alt="">
+                                <img src="img/message-avatar-5.jpg" alt="Divya Manian avatar">
                                 <div class="message-text online">
                                     <h2>Divya Manian</h2>
-                                    <p>You can download it on github easily</p>
+                                    <p>You can download it on github easily<span class="wcag-hidden">online</span></p>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="message">
+                    <li class="message" aria-live="polite">
                         <a href="#">
                             <div class="message-content">
-                                <img src="img/message-avatar-6.jpg" alt="">
+                                <img src="img/message-avatar-6.jpg" alt="Vin Thomas avatar">
                                 <div class="message-text">
                                     <h2>Vin Thomas</h2>
                                     <p>Thank you!</p>

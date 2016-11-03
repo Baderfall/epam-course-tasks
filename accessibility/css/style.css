@@ -30,7 +30,18 @@ input {
 .sprite {
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-} 
+}
+
+.wcag-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
 /*******CALENDAR*****/
 
@@ -48,6 +59,8 @@ input {
     text-align: center;
     color: #ffffff;
     background-color: #526e82;
+    display: flex;
+    justify-content: space-between;
 }
 
 .calendar-widget .arrow-left,
@@ -58,17 +71,17 @@ input {
 }
 
 .calendar-widget .arrow-left:hover,
-.calendar-widget .arrow-right:hover {
+.calendar-widget .arrow-right:hover,
+.calendar-widget .arrow-left:focus,
+.calendar-widget .arrow-right:focus {
     background-color: #435b6c;
 }
 
 .calendar-widget .arrow-left {
-    float: left;
     background-position: 0 0;
 }
 
 .calendar-widget .arrow-right {
-    float: right;
     background-position: -48px 0;
 }
 
@@ -100,11 +113,16 @@ input {
     background: #4cd9c0;
 }
 
+.calendar-widget table a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .calendar-widget .active {
     position: relative;
 }
 
-.calendar-widget .active span {
+.calendar-widget .active a {
     line-height: 30px;
     position: absolute;
     top: 9px;
@@ -159,7 +177,8 @@ input {
     background-position: -96px 0;
 }
 
-.music-widget .logo-block a:hover {
+.music-widget .logo-block a:hover,
+.music-widget .logo-block a:focus {
     background-color: #435b6c;
 }
 
@@ -188,6 +207,7 @@ input {
     height: 9px;
     border-radius: 5px;
     background: #efefef;
+    cursor: pointer;
 }
 
 .music-widget .info-block .timeline .loaded,
@@ -228,7 +248,8 @@ input {
     border-radius: 50%;
 }
 
-.music-widget .info-block ul li:hover {
+.music-widget .info-block ul li a:hover,
+.music-widget .info-block ul li a:focus {
     background-color: #f6f6f6;
 }
 
@@ -241,41 +262,51 @@ input {
 
 .music-widget .info-block ul .player-play {
     margin-left: 0;
+}
+
+.music-widget .info-block ul .player-play a {
     background-color: #4cd9c0;
     background-position: -145px 0;
 }
 
-.music-widget .info-block ul .player-play:hover {
+.music-widget .info-block ul .player-play a:hover,
+.music-widget .info-block ul .player-play a:focus {
     background-color: #42b9a4;
 }
 
-.music-widget .info-block ul .player-previous {
+.music-widget .info-block ul .player-previous a {
     background-position: -191px 0;
 }
 
 .music-widget .info-block ul .player-next {
     margin-left: 10px;
+}
+
+.music-widget .info-block ul .player-next a {
     background-position: -237px 0;
 }
 
 .music-widget .info-block ul .player-shuffle {
     margin-left: 20px;
+}
+
+.music-widget .info-block ul .player-shuffle a {
     background-position: -283px 0;
 }
 
-.music-widget .info-block ul .player-repeat {
+.music-widget .info-block ul .player-repeat a {
     background-position: -329px 0;
 }
 
-.music-widget .info-block ul .player-like {
+.music-widget .info-block ul .player-like a {
     background-position: -375px 0;
 }
 
-.music-widget .info-block ul .player-add {
+.music-widget .info-block ul .player-add a {
     background-position: -421px 0;
 }
 
-.music-widget .info-block ul .player-share {
+.music-widget .info-block ul .player-share a {
     background-position: -467px 0;
 }
 
@@ -283,7 +314,6 @@ input {
 
 .login-widget {
     width: 308px;
-    height: 209px;
 }
 
 .login-widget input {
@@ -320,12 +350,20 @@ input {
     border-left: 4px solid #ff8989;
 }
 
-.login-widget label {
+.login-widget label.sprite {
     position: absolute;
     display: block;
     float: left;
     width: 70px;
     height: 73px;
+}
+
+.login-widget label.error-message {
+    display: block;
+    color: tomato;
+    padding: 0 20px;
+    font-size: 1.2rem;
+    line-height: 30px;
 }
 
 .login-widget label.email {
@@ -351,7 +389,8 @@ input {
     background: #7191a8;
 }
 
-.login-widget .sign-up:hover {
+.login-widget .sign-up:hover,
+.login-widget .sign-up:focus {
     background: #81a3bb;
 }
 
@@ -360,7 +399,8 @@ input {
     background: #526e82;
 }
 
-.login-widget .sign-in:hover {
+.login-widget .sign-in:hover,
+.login-widget .sign-in:focus {
     background: #435b6c;
 }
 
@@ -615,13 +655,19 @@ input {
     background-position: -785px 0;
 }
 
-.converter-widget .buttons-block label:hover {
+.converter-widget .buttons-block label:hover,
+.converter-widget .buttons-block label:focus {
     background-color: #ff6767;
 }
 
-.converter-widget .buttons-block a {
+.converter-widget .buttons-block .more-buttons {
     float: right;
     height: 100%;
+}
+
+.converter-widget .buttons-block a {
+    height: 100%;
+    display: inline-block;
 }
 
 .converter-widget .buttons-block .add-button {
@@ -631,12 +677,13 @@ input {
 
 .converter-widget .buttons-block .choose-button {
     width: 69px;
-    height: 100%;
     background-position: -968px 0;
 }
 
 .converter-widget .buttons-block .add-button:hover,
-.converter-widget .buttons-block .choose-button:hover {
+.converter-widget .buttons-block .choose-button:hover,
+.converter-widget .buttons-block .add-button:focus,
+.converter-widget .buttons-block .choose-button:focus {
     background-color: #435b6c;
 }
 
@@ -711,7 +758,8 @@ input {
     background: #05aeb3;
 }
 
-.slider .slider-control a:hover {
+.slider .slider-control a:hover,
+.slider .slider-control a:focus {
     background: #0e9296;
 }
 
@@ -734,7 +782,8 @@ input {
     background-position: -1037px 0;
 }
 
-.weather-widget .buttons .f-button:hover {
+.weather-widget .buttons .f-button:hover,
+.weather-widget .buttons .f-button:focus {
     background-color: #ff6767;
 }
 
@@ -752,7 +801,10 @@ input {
 
 .weather-widget .buttons .c-button:hover,
 .weather-widget .buttons .add-button:hover,
-.weather-widget .buttons .settings-button:hover {
+.weather-widget .buttons .settings-button:hover,
+.weather-widget .buttons .c-button:focus,
+.weather-widget .buttons .add-button:focus,
+.weather-widget .buttons .settings-button:focus {
     background-color: #f6f6f6;
 }
 
@@ -781,7 +833,9 @@ input {
 }
 
 .message-widget header .settings-button:hover,
-.message-widget header .add-button:hover {
+.message-widget header .add-button:hover,
+.message-widget header .settings-button:focus,
+.message-widget header .add-button:focus {
     background-color: #40a592;
 }
 
@@ -796,7 +850,8 @@ input {
     list-style: none;
 }
 
-.message-widget .message:hover {
+.message-widget .message a:hover,
+.message-widget .message a:focus {
     background-color: #f6f6f6;
 }
 
@@ -806,6 +861,8 @@ input {
 
 .message-widget .message a {
     text-decoration: none;
+    display: block;
+    height: 100%;
 }
 
 .message-widget .message-content {
