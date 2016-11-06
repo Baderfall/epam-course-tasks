@@ -1,0 +1,34 @@
+html {
+    font-size: $base-font-size;
+}
+
+body {
+    font-family: $gotham;
+    letter-spacing: 1px;
+    background: $hoar;
+}
+
+.widget-block {
+    margin: 30px;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+input {
+    font-family: $gotham;
+}
+
+.wcag-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

@@ -1,0 +1,123 @@
+.converter-widget {
+    width: 307px;
+    background: $white;
+
+    .currency-block:not(:first-child) {
+        border-top: 1px solid $grizzle;
+    }
+
+    .currency-block {
+
+        input, label {
+            display: block;
+            font-weight: bold;
+            @include box-sizing(border-box);
+            height: 113px;
+            color: $gray;
+        }
+
+        label {
+            font-size: 1.8rem;
+            line-height: 116px;
+            position: relative;
+            float: left;
+            width: 102px;
+            cursor: text;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        label:before {
+            font-size: 2.7rem;
+            position: absolute;
+            top: 4px;
+            left: 154px;
+        }
+
+        label:after {
+            position: absolute;
+            top: 29px;
+            left: 102px;
+            height: 54px;
+            content: "";
+            border-right: 1px solid $grizzle;
+        }
+
+        input {
+            font-size: 4.1rem;
+            width: 205px;
+            padding-left: 70px;
+            color: lighten($gray, 20%);
+            border: none;
+            -moz-appearance: textfield;
+        }
+
+        input:focus {
+            color: $gray;
+        }
+        
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    .dollar label:before {
+        content: "$";
+    }
+
+    .pound label:before {
+        top: 2px;
+        content: "\00a3";
+    }
+
+    input[type="submit"] {
+        display: none;
+    }
+
+    .buttons-block {
+        font-size: 0;
+        height: 64px;
+        background: $blue;
+
+        label {
+            display: inline-block;
+            width: 102px;
+            height: 100%;
+            cursor: pointer;
+            background-color: $pink;
+            background-position: -785px 0;
+            @include sprite;
+        }
+
+        label:hover,
+        label:focus {
+            background-color: darken($pink, 5%);
+        }
+
+        .more-buttons {
+            float: right;
+            height: 100%;
+        }
+
+        .add-button {
+            width: 81px;
+            background-position: -887px 0;
+            height: 100%;
+            display: inline-block;
+            @include sprite;
+        }
+
+        .choose-button {
+            @extend .add-button;
+            width: 69px;
+            background-position: -968px 0;
+        }
+
+        .add-button:hover,
+        .choose-button:hover,
+        .add-button:focus,
+        .choose-button:focus {
+            background-color: darken($blue, 8%);
+        }
+    }
+}
