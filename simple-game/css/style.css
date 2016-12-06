@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Limbo";
+    src: url(../fonts/limbo-font.ttf);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Limbo";
+    margin: 0;
+    background-color: #eff0c4;
+    background-image: url(../img/background.jpg);
+    background-repeat: repeat-x;
+    height: 100%;
+    animation: backgroundMoving 6s infinite linear;
+}
+
+@keyframes backgroundMoving {
+    0% {background-position: 556px bottom;}
+    100% {background-position: 0px bottom;}
+}
+
+.game-stats {
+    position: fixed;
+    z-index: -1;
+}
+
+.game-stats ul {
+    list-style: none;
+}
+
+.game-stats ul li {
+    display: inline-block;
+    margin-right: 10px;
+    color: #a93131;
+    font-size: 32px;
+}
+
+.game-over-msg {
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 80%;
+    padding-bottom: 8%;
+    background: rgba(125, 47, 47, 0.86);
+    color: #fff;
+    position: fixed;
+    text-align: center;
+}
+
+.game-over-msg h1 {
+    font-size: 130px;
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+
+.game-over-msg h2 {
+    font-size: 42px;
+}
+
+.game-over-msg p {
+    margin-top: 40px;
+    font-size: 24px;
+    animation: blink 0.5s infinite alternate;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    100% {opacity: 0.5;}
+}
