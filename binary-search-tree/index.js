@@ -15,23 +15,23 @@ BinarySearchTree.prototype.insert = function(key, value) {
         this._root = node;
     }
     else {
-        this.insertToChilds(this._root, node);
+        insertToChilds(this._root, node);
     }
     return this;
-};
 
-BinarySearchTree.prototype.insertToChilds = function(father, node) {
-    if (node.key > father.key && father.right === null) {
-        father.right = node;
-    }
-    else if (node.key < father.key && father.left === null) {
-        father.left = node;
-    }
-    else if (node.key > father.key) {
-        this.insertToChilds(father.right, node);
-    }
-    else if (node.key < father.key) {
-        this.insertToChilds(father.left, node);
+    function insertToChilds(father, node) {
+        if (node.key > father.key && father.right === null) {
+            father.right = node;
+        }
+        else if (node.key < father.key && father.left === null) {
+            father.left = node;
+        }
+        else if (node.key > father.key) {
+            insertToChilds(father.right, node);
+        }
+        else if (node.key < father.key) {
+            insertToChilds(father.left, node);
+        }
     }
 };
 
