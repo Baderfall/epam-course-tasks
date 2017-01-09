@@ -1,0 +1,154 @@
+html {
+    font-size: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+}
+
+body, ul, li, p, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    background: url(../img/background.gif);
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+    font-family: Arial;
+}
+
+.animate {
+    transition: transform 0.3s ease-out;
+}
+
+header {
+    margin-bottom: 60px;
+}
+
+input, button {
+    color: inherit;
+    background: transparent;
+    border: 3px solid #fff;
+    font-size: 3.2rem;
+}
+
+input {
+    width: 300px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.slider {
+    height: 414px;
+    overflow: hidden;
+}
+
+.holder {
+    width: 1000%;
+}
+
+.slide {
+    float: left;
+    height: 414px;
+}
+
+.slide {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.item {
+    border: 7px solid #fff;
+    height: 400px;
+    width: 280px;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    border-bottom: 7px solid #fff;
+    margin-bottom: 5px;
+}
+
+.item h3 a {
+    font-size: 2rem;
+}
+
+.item .author {
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+
+.item .info {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item .info .time {
+    background-image: url(../img/clock.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.item .info .views {
+    background-image: url(../img/eye.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.item .description {
+    font-size: 1.3rem;
+    text-align: justify;
+    margin: 10px;
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    width: 20px;
+    display: inline-block;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-right: 5px;
+}
+
+nav a.active {
+    background: #fff;
+    color: #3115e1;
+}
+
+@media only screen and (max-width : 460px) {
+    header {
+        margin-bottom: 10px;
+    }
+
+    body {
+        padding: 7px;
+    }
+}
