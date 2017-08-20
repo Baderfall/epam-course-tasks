@@ -1,0 +1,22 @@
+/****COLORS*****/
+
+$hoar: #efefef;
+$blue: #526e82;
+$turquoise: #4cd9c0;
+$emerald: #bbfdf1;
+$pink: #ff8989;
+$white: #ffffff;
+$gray: #9d9d9d;
+$grizzle: #e2e2e2;
+$azure: #05aeb3;
+
+/*****FONTS******/
+
+$base-font-size: 10px;
+
+@font-face {
+    font-family: "GothamRounded";
+    src: url(../fonts/GothamRounded-Light.otf);
+}
+
+$gotham: "GothamRounded", sans-serif;

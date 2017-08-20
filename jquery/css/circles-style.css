@@ -1,0 +1,83 @@
+.circles {
+  width: 200px;
+  height: 810px;
+  background: #fff;
+  position: absolute;
+  top: 57px;
+  left: 424px;
+  text-align: center;
+}
+
+.circle-straight {
+  width: 160px;
+  height: 160px;
+  background: #efefef;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.circles canvas {
+  background: #efefef;
+  border-radius: 50%;
+  margin: 20px;
+  margin-bottom: 0;
+}
+
+.circle-straight-first-value {
+  width: 160px;
+  background: #56e5f6;
+  position: absolute;
+}
+
+.circle-straight-second-value {
+  width: 160px;
+  background: #4cd9c0;
+  position: absolute;
+}
+
+.circle-straight-third-value {
+  width: 160px;
+  background: #ec747d;
+  position: absolute;
+}
+
+.circle-input-first-value,
+.circle-input-second-value,
+.circle-input-third-value {
+  width: 160px;
+  height: 51px;
+  border-radius: 12px;
+  font-size: 20.38px;
+  padding: 13px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+}
+
+.circle-input-first-value {
+  border: 2px solid #56e5f6;
+}
+
+.circle-input-second-value{
+  border: 2px solid #4cd9c0;
+}
+
+.circle-input-third-value{
+  border: 2px solid #ec747d;
+}
+
+.circle-button {
+  width: 120px;
+  border-radius: 12px;
+  font-size: 20px;
+  line-height: 46px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.circle-button:hover {
+  background: #4cd9c0;
+}

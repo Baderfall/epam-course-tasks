@@ -1,0 +1,122 @@
+.weather-widget {
+    width: 307px;
+    background: $white;
+
+    .slider {
+        position: relative;
+        overflow: hidden;
+
+        @mixin to-bottom {
+            position: absolute;
+            bottom: 0;
+        }
+
+        ul {
+            width: 921px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slide {
+            position: relative;
+            float: left;
+            width: 307px;
+            height: 248px;
+            list-style-type: none;
+
+            img {
+                width: 100%;
+            }
+
+            .slide-text {
+                @include to-bottom;
+                left: 0;
+                padding: 12px;
+                color: $white;
+
+                h2 {
+                    font-size: 4.3rem;
+                    font-weight: normal;
+                    margin: 0;
+
+                    sup {
+                        font-size: 2.5rem;
+                        position: absolute;
+                        top: 7px;
+                    }
+                }
+
+                h3 {
+                    font-size: 1.7rem;
+                    margin: 0;
+                }
+            }
+        }
+
+        .slider-control {
+            @include to-bottom;
+            right: 0;
+            padding: 11px 12px;
+
+            a {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                margin-right: 4px;
+                @include border-radius(50%);
+                background: $azure;
+            }
+
+            a:hover,
+            a:focus {
+                background: darken($azure, 5%);
+            }
+
+            a:last-child {
+                margin-right: 0;
+            }
+
+            a.active {
+                background: darken($azure, 10%);
+            }
+        }
+    }
+
+    .buttons {
+        a {
+            float: left;
+            width: 25%;
+            height: 64px;
+            @include sprite;
+        }
+
+        .f-button {
+            background-color: $pink;
+            background-position: -1037px 0;
+        }
+
+        .f-button:hover,
+        .f-button:focus {
+            background-color: darken($pink, 5%);
+        }
+
+        .c-button {
+            background-position: -1114px 0;
+        }
+
+        .c-button:hover,
+        .c-button:focus {
+            background-color: darken($white, 5%);
+        }
+
+        .add-button {
+            @extend .c-button;
+            background-position: -1191px 0;
+        }
+
+        .settings-button {
+            @extend .c-button;
+            background-position: -1268px 0;
+        }
+    }
+}

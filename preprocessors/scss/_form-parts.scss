@@ -1,0 +1,146 @@
+.form-parts {
+    @include box-sizing(border-box);
+    width: 305px;
+    padding: 13px 10px 10px 12px;
+    background: $white;
+
+    @mixin square-size($size: 50px) {
+        width: $size;
+        height: $size;
+    }
+
+    input {
+        display: block;
+        float: left;
+    }
+
+    label {
+        @extend input;
+        float: right;
+    }
+
+    /*****RANGE*****/
+
+    /****WEBKIT****/
+
+    input[type="range"] {
+        width: 213px;
+        margin: 30px 0 0 0;
+        -webkit-appearance: none;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+        @include track;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        @include thumb;
+        margin-top: -4px;
+        -webkit-appearance: none;
+    }
+
+    /******FIREFOX*****/
+
+    input[type="range"]::-moz-range-track {
+        @include track;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        @include thumb;
+        border: none;
+    }
+
+    /****IE****/
+
+    input[type="range"]::-ms-thumb {
+        @include thumb;
+        border: none;
+    }
+
+    input[type="range"]::-ms-track {
+        @include track;
+        color: transparent;
+        border-width: 5px 0;
+        border-color: $white;
+    }
+
+    input[type="range"]::-ms-fill-lower {
+        @include border-radius(4px);
+        background: lighten($blue, 30%);
+    }
+
+    input[type="range"]::-ms-fill-upper {
+        @include border-radius(4px);
+        background: $blue;
+    }
+
+    /*******CHECKBOX-RADIO-PART******/
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="checkbox"] + label,
+    input[type="radio"] + label {
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] + label:before {
+        display: inline-block;
+        @include square-size(48px);
+        content: "";
+        border: 2px solid $pink;
+        @include border-radius(10px);
+        background: $white;
+    }
+
+    input[type="checkbox"]:checked + label:before,
+    input[type="radio"] + label:before,
+    input[type="radio"]:checked + label:before {
+        @include sprite;
+        background-position: -653px 0;
+    }
+
+    input[type="radio"] + label:before {
+        display: inline-block;
+        @include square-size(42px);
+        margin-top: 16px;
+        margin-right: 4px;
+        content: "";
+        background-position: -743px 0;
+    }
+
+    input[type="radio"]:checked + label:before {
+        background-position: -701px 0;
+    }
+
+    /*********FIELD-PART*********/
+
+    input[type="text"],
+    input[type="email"] {
+        font-size: 2rem;
+        width: 201px;
+        height: 47px;
+        padding-left: 11px;
+        @include border-radius(10px);
+    }
+
+    input[type="email"] {
+        margin-top: 30px;
+    }
+
+    input[type="text"]:valid {
+        color: $turquoise;
+        border: 2px solid $turquoise;
+    }
+    
+    input[type="email"]:valid {
+        @extend input[type="text"]:valid;
+    }
+
+    input:invalid {
+        border: 2px solid $pink;
+        color: $pink;
+    }
+}

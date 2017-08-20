@@ -1,0 +1,42 @@
+@mixin border-radius($radius:50%) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-sizing($sizing:border-box) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin justify-content($space:space-between) {
+    -webkit-box-pack: $space;
+    -ms-flex-pack: $space;
+    justify-content: $space;
+}
+
+@mixin track {
+    height: 8px;
+    border-radius: 4px;
+    background: lighten($blue, 30%);
+}
+
+@mixin thumb {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: $blue;
+}
+
+@mixin sprite {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+}

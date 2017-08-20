@@ -1,0 +1,130 @@
+.message-widget {
+    width: 307px;
+    background: $white;
+
+    header {
+        background: $turquoise;
+
+        .settings-button {
+            float: left;
+            width: 75px;
+            height: 64px;
+            background-color: darken($turquoise, 10%);
+            background-position: -1345px 0;
+            @include sprite;
+        }
+
+        .settings-button:hover,
+        .settings-button:focus {
+            background-color: darken($turquoise, 20%);
+        }
+
+        .add-button {
+            @extend .settings-button;
+            float: right;
+            width: 55px;
+            background-color: inherit;
+            background-position: -1420px 0;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .message {
+        display: block;
+        height: 82px;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            display: block;
+            height: 100%;
+        }
+
+        a:hover,
+        a:focus {
+            background-color: darken($white, 3%);
+        }
+
+        img {
+            float: left;
+            width: 50px;
+            height: 50px;
+            border: none;
+            @include border-radius(50%);
+        }
+
+        .message-text {
+            position: relative;
+            margin-left: 67px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 1px 0 0 0;
+            color: darken($grizzle, 20%);
+        }
+
+        p {
+            font-size: 1.4rem;
+            overflow: hidden;
+            margin: 5px 0 0 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: darken($grizzle, 5%);
+        }
+
+        .typing {
+            p {
+                font-style: italic;
+            }
+        }
+
+        .sent:before {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 5px;
+            content: "";
+            @include sprite;
+            background-position: -1475px 0;
+        }
+
+        .failed:before {
+            @extend .sent;
+            background-position: -1489px 0;
+        }
+
+        .online:after {
+            position: absolute;
+            top: 19px;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            content: "";
+            @include border-radius;
+            background: $turquoise;
+        }
+
+        .offline {
+            @extend .online;
+        }
+
+        .offline:after {
+            background: $pink;
+        }
+    }
+
+    .message:not(:first-child) {
+        border-top: 1px solid $grizzle;
+    }
+
+    .message-content {
+        @include box-sizing(border-box);
+        height: 100%;
+        padding: 16px 15px;
+    }
+}
